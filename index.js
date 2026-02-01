@@ -1,37 +1,40 @@
 const select = document.querySelector("select");
-const list = document.querySelector("ul");
-const h1 = document.querySelector("h1");
+const html = document.querySelector("html");
 
 select.addEventListener("change", () => {
   const choice = select.value;
-  createCalendar(choice);
+
+  // ADD SWITCH STATEMENT
+  
+  switch (choice) {
+    case "white":
+      update("white", "black");
+      break;
+      
+    case "black":
+      update("black", "white");
+      break;
+
+    case "purple":
+      update("purple", "white");
+      break;
+
+    case "yellow":
+      update("yellow", "purple");
+      break;
+      
+    case "psychedelic":
+      update("psychedelic", "purple");
+      break;
+
+    default:
+        update("white", "black");
+        break;
+
+  }
 });
 
-function createCalendar(month) {
-  let days = 31;
-
-  // ADD CONDITIONAL HERE
-
-  if (month == "January" || month == "March" || month== "May" || month == "July" || month == "August" || month =="October" || month== "December"){
-    days = 31;
-  }
-
-  else if (month == "April" || month == "June" || month== "September" || month == "November"){
-    days = 30;
-  }
-
-  else {
-    days = 28;
-  }
-
-  list.textContent = "";
-  h1.textContent = month;
-  for (let i = 1; i <= days; i++) {
-    const listItem = document.createElement("li");
-    listItem.textContent = i;
-    list.appendChild(listItem);
-  }
+function update(bgColor, textColor) {
+  html.style.backgroundColor = bgColor;
+  html.style.color = textColor;
 }
-
-select.value = "January";
-createCalendar("January");
