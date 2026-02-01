@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JS PRACTICE</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
 </head>
 <body>
-    
-    <script>
-        let user_ = prompt("Log-in:");
+        <label for="month">Select month: </label>
+    <select id="month">
+    <option value="January">January</option>
+    <option value="February">February</option>
+    <option value="March">March</option>
+    <option value="April">April</option>
+    <option value="May">May</option>
+    <option value="June">June</option>
+    <option value="July">July</option>
+    <option value="August">August</option>
+    <option value="September">September</option>
+    <option value="October">October</option>
+    <option value="November">November</option>
+    <option value="December">December</option>
+    </select>
 
-        if (user_ === "Admin") {
-            let pass_ = prompt("Password:");
+    <h1></h1>
 
-            if (pass_ === "TheMaster") {
-                alert("Welcome!");
-            } else if (pass_ === null || pass_ === "") {
-                alert("Canceled");
-            } else {
-                alert("Wrong password");
-            }
-        }   
-    </script>
-
+    <ul></ul>
 
 </body>
 </html>
