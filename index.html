@@ -10,10 +10,8 @@
     <script>
         let a = prompt("Age?", 0);
 
-        if ( 13 < a && a <= 90 ) {
-          alert( "You are a teenager!" );
-        } else {
-          alert( "You are not a teenager." );
+        if ( a <= 14 || a >= 90 ) {
+          alert("Outside Range");
         }
 
     </script>
