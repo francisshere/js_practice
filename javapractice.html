@@ -7,14 +7,15 @@
 </head>
 <body>
     <script>
-        let result;
-        let a = 3;
-        let b = 0;
+        let message;
+        let login = prompt("Enter your login","");
 
-        (a + b < 4) ? result = 'Below' 
-        :result = 'Over';
+        login == 'Employee' ? message = 'Hello' :
+        login == 'Director' ? message = 'Greetings' :
+        login == '' ? message = 'No login' :
+        message = ''; 
 
-        alert(result);
+        alert(message);
     </script>
 </body>
 </html>
