@@ -8,12 +8,19 @@
 <body>
     
     <script>
-        let a = prompt("Age?", 0);
+        let user_ = prompt("Log-in:");
 
-        if ( !(a >= 14 && a <= 90) ) {
-          alert("Outside Range");
-        }
+        if (user_ === "Admin") {
+            let pass_ = prompt("Password:");
 
+            if (pass_ === "TheMaster") {
+                alert("Welcome!");
+            } else if (pass_ === null || pass_ === "") {
+                alert("Canceled");
+            } else {
+                alert("Wrong password");
+            }
+        }   
     </script>
 
 
