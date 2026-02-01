@@ -10,7 +10,7 @@
     <script>
         let a = prompt("Age?", 0);
 
-        if ( a <= 14 || a >= 90 ) {
+        if ( !(a >= 14 && a <= 90) ) {
           alert("Outside Range");
         }
 
