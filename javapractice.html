@@ -7,15 +7,16 @@
 </head>
 <body>
     <script>
-        let message;
-        let login = prompt("Enter your login","");
+        let browser = prompt("Enter your browser name:", "");
 
-        login == 'Employee' ? message = 'Hello' :
-        login == 'Director' ? message = 'Greetings' :
-        login == '' ? message = 'No login' :
-        message = ''; 
+        if (browser === 'Edge') {
+        alert( "You've got the Edge!" );
+        } else if (browser === 'Chrome' || browser === 'Firefox' || browser === 'Safari' || browser === 'Opera') {
+        alert( 'Okay we support these browsers too' );
+        } else {
+        alert( 'We hope that this page looks ok!' );
+        }
 
-        alert(message);
     </script>
 </body>
 </html>
