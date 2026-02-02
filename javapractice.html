@@ -7,16 +7,11 @@
 </head>
 <body>
     <script>
-        let ask = (question, yes, no) => {
-            (confirm(question)) ? yes() : no();
-        } 
-        
-        ask(
-        "Do you agree?",
-        function() { alert("You agreed."); },
-        function() { alert("You canceled the execution."); }
-        );
+        function add7(x){
+            return x + 7;
+        }
 
+        console.log(add7(10)); // should return 10
     </script>
 </body>
 </html>
