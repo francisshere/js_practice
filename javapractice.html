@@ -7,11 +7,11 @@
 </head>
 <body>
     <script>
-        function multiply(x,y){
-            return x * y;
+        function capitalize(str){
+            return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
         }
 
-        console.log(multiply(3, 2)); // should return 70
+        console.log(capitalize("aBcD")); // should return Abcd
     </script>
 </body>
 </html>
