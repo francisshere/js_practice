@@ -1,40 +1,29 @@
-const select = document.querySelector("select");
-const html = document.querySelector("html");
+const people = [
+  "Chris",
+  "Anne",
+  "Colin",
+  "Terri",
+  "Phil",
+  "Lola",
+  "Sam",
+  "Kay",
+  "Bruce",
+];
 
-select.addEventListener("change", () => {
-  const choice = select.value;
+const admitted = document.querySelector(".admitted");
+const refused = document.querySelector(".refused");
+admitted.textContent = "Admit: ";
+refused.textContent = "Refuse: ";
 
-  // ADD SWITCH STATEMENT
-  
-  switch (choice) {
-    case "white":
-      update("white", "black");
-      break;
-      
-    case "black":
-      update("black", "white");
-      break;
-
-    case "purple":
-      update("purple", "white");
-      break;
-
-    case "yellow":
-      update("yellow", "purple");
-      break;
-      
-    case "psychedelic":
-      update("psychedelic", "purple");
-      break;
-
-    default:
-        update("white", "black");
-        break;
-
+// loop starts here
+for (let i=0; i<people.length; i++){
+  if (people[i] === "Phil" || people[i] === "Lola" ){
+    // refused.textContent += ...;
+      refused.textContent += `${people[i]}, `;
+  } else {
+    // admitted.textContent += ...;
+    admitted.textContent += ` ${people[i]}, `;
   }
-});
-
-function update(bgColor, textColor) {
-  html.style.backgroundColor = bgColor;
-  html.style.color = textColor;
 }
+
+

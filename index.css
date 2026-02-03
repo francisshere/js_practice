@@ -1,6 +1,5 @@
 html {
   font-family: sans-serif;
-  height: 95%;
 }
 
 h2 {
@@ -16,5 +15,10 @@ h2 {
 
 body {
   margin: 10px;
-  height: inherit;
+  background: #f5f9fa;
+}
+
+.output {
+  height: 100px;
+  overflow: auto;
 }
