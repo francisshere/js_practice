@@ -1,9 +1,8 @@
+ let n = 10;
 
-do {
-  num = prompt("Enter a number greater than 100:", 0);
-
-  if ( num === null || num > 100 ) {
-    break;
-  }
-
-} while ( num <= 100 );
+ primeMethod: for (let i = 2; i <= n; i++){
+    for (let j = 2; j < i; j++){
+        if (i % j === 0) continue primeMethod;
+    }
+    alert(i);
+ }
