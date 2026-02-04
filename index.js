@@ -1,10 +1,22 @@
-let styles = ["Jazz", "Blues"];
-styles.push("Rock-n-Roll");
+let sum = 0;
 
-styles[1] = "Classic";
+function sumInput() {
+    let arr = [];
 
-styles.shift();
+    while (true) {
+        let value = prompt("Enter a number:", 0);
 
-styles.unshift("Rap", "Reggae");
+        // Break the loop if the input is not a finite number
+        if (value === null || value === "" || !isFinite(value)) 
+            {break;} else {
+                arr.push(value);
 
-alert(styles);
+                sum += +value;
+                
+                console.log(arr);
+                console.log(sum);
+            }
+    }
+}
+
+sumInput();
