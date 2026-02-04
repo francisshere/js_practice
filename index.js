@@ -1,8 +1,10 @@
- let n = 10;
+let styles = ["Jazz", "Blues"];
+styles.push("Rock-n-Roll");
 
- primeMethod: for (let i = 2; i <= n; i++){
-    for (let j = 2; j < i; j++){
-        if (i % j === 0) continue primeMethod;
-    }
-    alert(i);
- }
+styles[1] = "Classic";
+
+styles.shift();
+
+styles.unshift("Rap", "Reggae");
+
+alert(styles);
