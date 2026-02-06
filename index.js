@@ -1,18 +1,9 @@
-function shuffle(array){
-    return array.sort(() => Math.random() - 0.5);
+function unique(arr) {
+  return arr.filter((item, index) => arr.indexOf(item) === index);
 }
 
-let arr = [1, 2, 3];
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
 
-shuffle(arr);
-alert(arr);
-// arr = [3, 2, 1]
-
-shuffle(arr);
-alert(arr);
-// arr = [2, 1, 3]
-
-shuffle(arr);
-alert(arr);
-// arr = [3, 1, 2]
-// ...
+alert( unique(strings) ); // Hare, Krishna, :-O
