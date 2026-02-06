@@ -1,11 +1,11 @@
-function filterRange(arr, a, b) {
-  return arr.filter(item =>(item >= a && item <= b))
+let arr = [5, 2, 1, -10, 8];
+
+
+function reverseSort(a,b) {
+    if (a < b) return 1;
+    if (a == b) return 0;
+    if (a > b) return -1;
 }
 
-let arr = [5, 3, 8, 1];
-
-let filtered = filterRange(arr, 1, 5);
-
-alert( filtered ); // 3,1 (matching values)
-
-alert( arr )
+arr.sort(reverseSort);
+alert( arr ); // 8, 5, 2, 1, -10
