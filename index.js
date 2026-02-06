@@ -1,11 +1,10 @@
-let arr = [5, 2, 1, -10, 8];
-
-
-function reverseSort(a,b) {
-    if (a < b) return 1;
-    if (a == b) return 0;
-    if (a > b) return -1;
+function copySorted(x) {
+    return x.slice().sort();
 }
 
-arr.sort(reverseSort);
-alert( arr ); // 8, 5, 2, 1, -10
+let arr = ["HTML", "JavaScript", "CSS"];
+
+let sorted = copySorted(arr);
+
+alert( sorted ); // CSS, HTML, JavaScript
+alert( arr ); // HTML, JavaScript, CSS (no changes)
