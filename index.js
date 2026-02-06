@@ -1,14 +1,11 @@
-function camelize(str){
-    removed_ = str.split("-");
-    capitalized_ = removed_.map((word, index) => {
-        if (index == 0) {
-            return word;
-        } else {
-            return word[0].toUpperCase() + word.slice(1);
-        }
-    });
-    joined_ = capitalized_.join("");
-    alert (joined_);
+function filterRange(arr, a, b) {
+  return arr.filter(item => (a <= item && item <= b));
 }
 
-camelize("-webkit-transition");
+let arr = [5, 3, 8, 1];
+
+let filtered = filterRange(arr, 1, 4);
+
+alert( filtered ); // 3,1 (matching values)
+
+alert( arr )
