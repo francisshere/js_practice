@@ -1,10 +1,18 @@
-function copySorted(x) {
-    return x.slice().sort();
+function shuffle(array){
+    return array.sort(() => Math.random() - 0.5);
 }
 
-let arr = ["HTML", "JavaScript", "CSS"];
+let arr = [1, 2, 3];
 
-let sorted = copySorted(arr);
+shuffle(arr);
+alert(arr);
+// arr = [3, 2, 1]
 
-alert( sorted ); // CSS, HTML, JavaScript
-alert( arr ); // HTML, JavaScript, CSS (no changes)
+shuffle(arr);
+alert(arr);
+// arr = [2, 1, 3]
+
+shuffle(arr);
+alert(arr);
+// arr = [3, 1, 2]
+// ...
