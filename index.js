@@ -1,9 +1,8 @@
-function unique(arr) {
-  return arr.filter((item, index) => arr.indexOf(item) === index);
-}
+// your JavaScript file
+const container = document.querySelector("#container");
 
-let strings = ["Hare", "Krishna", "Hare", "Krishna",
-  "Krishna", "Krishna", "Hare", "Hare", ":-O"
-];
+const content = document.createElement("div");
+content.classList.add("content");
+content.textContent = "This is the glorious text-content!";
 
-alert( unique(strings) ); // Hare, Krishna, :-O
+container.appendChild(content);
