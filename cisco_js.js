@@ -1,10 +1,13 @@
-let rose_prc = 8;
-let lily_prc = 10;
-let tulip_prc = 2;
+const rose_prc = 8;
+const lily_prc = 10;
+const tulip_prc = 2;
 
 let rose_qty = 70
 let lily_qty = 50;
 let tulip_qty = 120;
+
+rose_qty = rose_qty - 20;
+lily_qty = lily_qty - 30;
 
 let rose_total = rose_prc * rose_qty;
 let lily_total = lily_prc * lily_qty;
