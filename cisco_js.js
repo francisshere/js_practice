@@ -1,40 +1,4 @@
-let books = [
-    {title: "Speaking JavaScript",
-     author: "Axel Rauschmayer",
-     pages: 460,
-    },
-
-    {title: "Programming JavaScript Applications",
-     author: "Eric Elliott",
-     pages: 254,
-    },
-
-    {title: "Understanding ECMAScript 6",
-     author: "Nicholas C. Zakas",
-     pages: 352,
-    }    
-];
-
-//2
-books.push({title: "Learning JavaScript Design Patterns", author: "Addy Osmani", pages:254});
-console.log(books.length);
-console.log(books[0].title);
-console.log(books[1].title);
-console.log(books[2].title);
-console.log(books[3].title);
-
-//3
-let last_two = books.slice(-2);
-console.log(last_two[0].title);
-console.log(last_two[1].title);
-
-//4
-books.shift();
-console.log(books.length);
-console.log(books[0].title);
-console.log(books[1].title);
-console.log(books[2].title);
-
-//5 
-let sum = books[0].pages + books[1].pages + books[2].pages;
-console.log(sum);
+console.log(2 _ 3 _ 1);      // expected 7  
+console.log(2 _ 4);          // expected 16  
+console.log(5 _ 1);          // expected 5  
+console.log(8 _ 2 _ 5 _ 2);   // expected 39
