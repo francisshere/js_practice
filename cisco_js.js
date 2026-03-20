@@ -1,4 +1,6 @@
-console.log(true || false);  
-console.log(false || !false);  
-console.log(false && false || true);  
-console.log(true || false || false && true);
+let width = Number(prompt("width: "));
+let height = Number(prompt("height: "));
+let length = Number(prompt("length: "));
+
+let volume = width * height * length;
+console.log(`Volume is ${volume}`)
