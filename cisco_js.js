@@ -1,8 +1,7 @@
-let ticket = {
-    from: "Station 1",
-    to: "Station 2",
-    price: "$5"
-};
+let person = {};
+person.name = "Francis";
+person.surname = "Gapol";
 
 
-console.log("From: " + ticket.from + " / To: " + ticket.to + " / Price: " + ticket.price);
+console.log("Name: " + person.name);
+console.log("Surname: " + person.surname);
