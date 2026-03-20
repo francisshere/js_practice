@@ -14,3 +14,10 @@ let books = [
      pages: "352",
     }    
 ];
+
+books.push({title: "Learning JavaScript Design Patterns", author: "Addy Osmani", pages:"254"});
+console.log(books.length);
+console.log(books[0].title);
+console.log(books[1].title);
+console.log(books[2].title);
+console.log(books[3].title);
