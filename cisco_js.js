@@ -1,6 +1,7 @@
 try {
-    let someNumber = 10;
-    someNumber.length(); // -> Uncaught TypeError: someNumber.length is not a function
+const someConstValue = 5;
+someConstValue = 7; // -> Uncaught TypeError: Assignment to constant variable.
+
 } catch (err) {
     console.log("Error is: " + err);
 }
