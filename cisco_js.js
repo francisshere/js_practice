@@ -1,11 +1,23 @@
-let n = Number(prompt("Enter an initial number: "));
-let n2 = Number(prompt("Enter the final number: "));
+let numbers = [21, 45, 100, 12, 11, 78, 61, 4, 39, 22];
 
-if (n < n2){
-    console.log("Wrong inputs");
-} else {
-    do {
-        console.log(n);
-        n -= 10;
-    } while (n > -1);
-}
+
+// orig
+numbers.forEach(element => {
+    console.log(element);
+});
+
+
+// even
+numbers.forEach(element => {
+    if ((element % 2) === 0){
+        console.log(element);
+    }
+});
+
+
+//larger than 10, smaller than 60
+numbers.forEach(element => {
+    if (element >  10 && element < 60){
+        console.log(element);
+    }
+});
