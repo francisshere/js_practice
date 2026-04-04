@@ -1,23 +1,29 @@
-let numbers = [21, 45, 100, 12, 11, 78, 61, 4, 39, 22];
+let movies = [
+];
 
 
-// orig
-numbers.forEach(element => {
-    console.log(element);
-});
-
-
-// even
-numbers.forEach(element => {
-    if ((element % 2) === 0){
-        console.log(element);
+while (true){
+    let movie_input = {
+        movie_name: prompt("Movie name: "),
+        movie_rating: Number(prompt("Movie rating: ")),
     }
-});
+    movies.push(movie_input);
 
+    if (movie_input.movie_name === null || movie_input.movie_rating === null) {
+        console.log("Movies with Ratings Above 7");
+        movies.forEach(element => {
+        if (element.movie_rating > 7){
+            console.log(element.movie_name + ": " + element.movie_rating); 
+        }
+        });
 
-//larger than 10, smaller than 60
-numbers.forEach(element => {
-    if (element >  10 && element < 60){
-        console.log(element);
+        console.log("Movies with Ratings below 7");
+        movies.forEach(element => {
+        if (element.movie_rating < 7){
+            console.log(element.movie_name + ": " + element.movie_rating); 
+        }
+        });
+
+        return;
     }
-});
+}
