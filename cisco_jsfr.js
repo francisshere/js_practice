@@ -19,17 +19,36 @@ let contacts = [{
 ];
 
 
-console.log("Name: " + contacts[0].name + " / Phone: " + contacts[0].phone + " / Email: " + contacts[0].email);
-console.log("Name: " + contacts[1].name + " / Phone: " + contacts[1].phone + " / Email: " + contacts[1].email);
-console.log("Name: " + contacts[2].name + " / Phone: " + contacts[2].phone + " / Email: " + contacts[2].email);
+while (true) {
+    let choice = prompt("1: First Contact | 2: Last Contact | 3: Add Contact");
+    if (choice === null){
+        return;
+    }
 
-//3.2.5 LAB
-let user_input = {
-    name: prompt("Enter your name: "),
-    phone: prompt("Enter your phone number: "),
-    email: prompt("Enter your email: "),
-}
+    switch (choice) {
+        case "1":
+            alert("Name: " + contacts[0].name + " / Phone: " + contacts[0].phone + " / Email: " + contacts[0].email);
+            break;
+    
+        case "2":
+            alert("Name: " + contacts[contacts.length -1 ].name + " / Phone: " + contacts[contacts.length -1 ].phone + " / Email: " + contacts[contacts.length -1 ].email);
+             break;
 
-contacts.push(user_input);
-console.log("Name: " + contacts[0].name + " / Phone: " + contacts[0].phone + " / Email: " + contacts[0].email);
-console.log("Name: " + contacts[3].name + " / Phone: " + contacts[3].phone + " / Email: " + contacts[3].email);
+        case "3":
+        let user_input = {
+            name: prompt("Enter your name: "),
+            phone: prompt("Enter your phone number: "),
+            email: prompt("Enter your email: "),
+        }
+
+        if ((!user_input.name) || (!user_input.phone) || (!user_input.email)){
+            alert("Atleast one detail is missing!");
+        } else {
+            contacts.push(user_input);
+        }
+            break;
+
+        default:
+            break;
+        }
+    }
