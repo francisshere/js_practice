@@ -1,14 +1,39 @@
-let vessel = [
-    {
-        LATITUDE: 40.07288, 
-        LONGITUDE: 154.48535, 
-        COURSE: 285.6, 
-        SPEED: 14.0, 
-        IMO: 9175717,
-        NAME: "MARENO",
+while (true) {
+
+num1 = Number(prompt("Enter first number: "));
+num2 = Number(prompt("Enter second number: "));
+operation = prompt("Enter an operation symbol (+, -, *, /): ");
+
+if (num1 === "Q" ||num2 === "Q" || operation === "Q"){
+    break;
+}
+
+if ((Number.isNaN(num1) || Number.isNaN(num2))){
+    alert("Invalid inputs");
+} else {
+    switch (operation) {
+        case "+":
+            result = num1 + num2;
+            alert(result);
+            break;
+
+        case "-":
+            result = num1 - num2;
+            alert(result);
+            break;
+
+        case "*":
+            result = num1 * num2;
+            alert(result);
+            break;
+
+        case "/":
+            result = num1 / num2;
+            alert(result);
+            break;
+
+        default:
+            break;
+        }
     }
-]
- 
-for( let key in vessel) { 
-    console.log(`${key} -> ${vessel[key]}`); 
 }
