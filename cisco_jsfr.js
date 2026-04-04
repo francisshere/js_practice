@@ -18,7 +18,7 @@ let contacts = [{
 }
 ];
 
-
+//4.0.9 LAB
 while (true) {
     let choice = prompt("1: First Contact | 2: Last Contact | 3: Add Contact");
     if (choice === null){
