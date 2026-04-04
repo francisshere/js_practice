@@ -18,9 +18,9 @@ let contacts = [{
 }
 ];
 
-//4.0.9 LAB
+//4.1.12 LAB
 while (true) {
-    let choice = prompt("1: First Contact | 2: Last Contact | 3: Add Contact");
+    let choice = prompt("1: First Contact | 2: Last Contact | 3: Add Contact | 4: List All | 5: Exit");
     if (choice === null){
         return;
     }
@@ -47,6 +47,15 @@ while (true) {
             contacts.push(user_input);
         }
             break;
+
+        case "4":
+            contacts.forEach(element => {
+                alert("Name: " + element.name + " / Phone: " + element.phone + " / Email: " + element.email);
+            });
+            break;
+
+        case "5":
+            return;
 
         default:
             break;
