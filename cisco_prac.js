@@ -1,17 +1,4 @@
-function div(a,b){
-    let result = a/b;
-    if (result === Infinity){
-        throw new RangeError("Cannot divide by 0");
-    }
-    return result;
+let end = 6; 
+for(let i=1; i < end; i++){
+    console.log(i); 
 }
-
-let numbers = [10, 40, 0, 20, 50];
-
-numbers.forEach(element => {
-    try {
-    divide = div(1000, element);
-    console.log(divide);
- } catch (e) {
-    console.log("Error Caught");
-}});
