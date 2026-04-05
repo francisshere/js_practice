@@ -38,6 +38,29 @@ function addNewContact(contacts, name, phone, email) {
     contacts.push({ name, phone, email });
 }
 
+function sortList(contacts, sort){
+    if (!(contacts instanceof Array)) {
+        alert("Invalid contact list");
+        return;
+    }
+
+    switch (sort){
+        case 1:
+            contacts.sort((a,b) => a.name.localeCompare(b.name));
+            break;
+        case 2:
+            contacts.sort((a, b) => a.phone.localeCompare(b.phone));
+            break;
+        case 3:
+            contacts.sort((a, b) => a.email.localeCompare(b.email));
+            break;
+        default:
+            break;
+    }
+
+    showAllContacts(contacts);
+}
+
 let contacts = [{
     name: "Maxwell Wright",
     phone: "(0191) 719 6495",
@@ -64,7 +87,8 @@ while (true) {
         "1: First Contact\n" +
         "2: Add Contact\n" +
         "3: List All\n" +
-        "4: Exit"
+        "4: Sort\n" +
+        "5: Exit"
     );
 
     if (choice === null) {
@@ -89,6 +113,11 @@ while (true) {
             break;
 
         case "4":
+            let sort_choice = Number(prompt("Choose a sort: 1-Name/ 2- Phone / 3-Email"));
+            sortList(contacts, sort_choice);
+            break;
+
+        case "5":
             alert("Exiting program...");
             break;
 
