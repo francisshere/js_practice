@@ -1,10 +1,10 @@
-function fibItr(n) {
-  let a = 0, b = 1, c;
-  while (n-- > 0) {
-    c = a;
-    a = b;
-    b += c;
-    console.log(a);
-  }
-  return a;
+function div(a,b){
+    let result = a/b;
+    if (result === Infinity){
+        throw new RangeError("Cannot divide by 0");
+    }
+    return result;
 }
+
+console.log(div(4, 2)); // -> 2
+console.log(div(4, 0)); // -> Uncaught RangeError: Can’t divide by 0
