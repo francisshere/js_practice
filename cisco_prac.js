@@ -6,5 +6,12 @@ function div(a,b){
     return result;
 }
 
-console.log(div(4, 2)); // -> 2
-console.log(div(4, 0)); // -> Uncaught RangeError: Can’t divide by 0
+let numbers = [10, 40, 0, 20, 50];
+
+numbers.forEach(element => {
+    try {
+    divide = div(1000, element);
+    console.log(divide);
+ } catch (e) {
+    console.log("Error Caught");
+}});
