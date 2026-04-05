@@ -1,11 +1,6 @@
-let numbers = [50, 10, 40, 30, 20];
-
-let compareNum = (a,b) => {
-    let retVal = (a < b) ? 1 : -1;
-    return retVal
+function fibRec(n){
+    return n<2?n:fibRec(n-1) + fibRec(n-2);
 }
 
-let sorted = numbers.sort(compareNum);
-console.log(sorted); // [10, 20, 30, 40, 50]
-
-
+console.log(fibbRec(4)); // -> 3
+console.log(fibbRec(7)); // -> 13
