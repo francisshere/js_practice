@@ -1,4 +1,10 @@
-let fibRec = n => n<2?n:fibRec(n-1) + fibRec(n-2);
-
-console.log(fibRec(4)); // -> 3
-console.log(fibRec(7)); // -> 13
+function fibItr(n) {
+  let a = 0, b = 1, c;
+  while (n-- > 0) {
+    c = a;
+    a = b;
+    b += c;
+    console.log(a);
+  }
+  return a;
+}
