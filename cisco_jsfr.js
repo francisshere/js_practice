@@ -1,3 +1,43 @@
+function showContact(contacts, index) {
+    if (!(contacts instanceof Array)) {
+        alert("Invalid contact list");
+        return;
+    }
+
+    if (index < 0 || index >= contacts.length) {
+        alert("Invalid index");
+        return;
+    }
+
+    let c = contacts[index];
+    alert("Name: " + c.name + " / Phone: " + c.phone + " / Email: " + c.email);
+}
+
+function showAllContacts(contacts) {
+    if (!(contacts instanceof Array)) {
+        alert("Invalid contact list");
+        return;
+    }
+
+    contacts.forEach(c => {
+        alert("Name: " + c.name + " / Phone: " + c.phone + " / Email: " + c.email);
+    });
+}
+
+function addNewContact(contacts, name, phone, email) {
+    if (!(contacts instanceof Array)) {
+        alert("Invalid contact list");
+        return;
+    }
+
+    if (!name || !phone || !email) {
+        alert("All fields are required!");
+        return;
+    }
+
+    contacts.push({ name, phone, email });
+}
+
 let contacts = [{
     name: "Maxwell Wright",
     phone: "(0191) 719 6495",
@@ -18,46 +58,42 @@ let contacts = [{
 }
 ];
 
-//4.1.12 LAB
+//5.1.11 LAB
 while (true) {
-    let choice = prompt("1: First Contact | 2: Last Contact | 3: Add Contact | 4: List All | 5: Exit");
-    if (choice === null){
-        return;
+    let choice = prompt(
+        "1: First Contact\n" +
+        "2: Add Contact\n" +
+        "3: List All\n" +
+        "4: Exit"
+    );
+
+    if (choice === null) {
+        break;
     }
 
     switch (choice) {
         case "1":
-            alert("Name: " + contacts[0].name + " / Phone: " + contacts[0].phone + " / Email: " + contacts[0].email);
+            let index = Number(prompt("Index to be displayed"));
+            showContact(contacts, index); // first contact
             break;
-    
+
         case "2":
-            alert("Name: " + contacts[contacts.length -1 ].name + " / Phone: " + contacts[contacts.length -1 ].phone + " / Email: " + contacts[contacts.length -1 ].email);
-             break;
+            let name = prompt("Enter name:");
+            let phone = prompt("Enter phone:");
+            let email = prompt("Enter email:");
+            addNewContact(contacts, name, phone, email);
+            break;
 
         case "3":
-        let user_input = {
-            name: prompt("Enter your name: "),
-            phone: prompt("Enter your phone number: "),
-            email: prompt("Enter your email: "),
-        }
-
-        if ((!user_input.name) || (!user_input.phone) || (!user_input.email)){
-            alert("Atleast one detail is missing!");
-        } else {
-            contacts.push(user_input);
-        }
+            showAllContacts(contacts);
             break;
 
         case "4":
-            contacts.forEach(element => {
-                alert("Name: " + element.name + " / Phone: " + element.phone + " / Email: " + element.email);
-            });
+            alert("Exiting program...");
             break;
-
-        case "5":
-            return;
 
         default:
-            break;
-        }
+            alert("Invalid choice!");
+            continue;
     }
+}
